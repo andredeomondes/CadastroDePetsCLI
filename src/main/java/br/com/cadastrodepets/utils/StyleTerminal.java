@@ -1,17 +1,13 @@
 package main.java.br.com.cadastrodepets.utils;
 
-/**
- * Utility class for ANSI terminal styling and CLI animations.
- */
-public final class TerminalStyle {
+public final class StyleTerminal {
 
-    // Prevent instantiation
-    private TerminalStyle() {}
+    private StyleTerminal() {
+        throw new UnsupportedOperationException("Utilidade de estilo de terminal não pode ser instanciada");
+    }
 
-    // ANSI Escape Codes
     public static final String RESET = "\033[0m";
 
-    // Regular Colors
     public static final String BLACK = "\033[0;30m";
     public static final String RED = "\033[0;31m";
     public static final String GREEN = "\033[0;32m";
@@ -21,11 +17,9 @@ public final class TerminalStyle {
     public static final String CYAN = "\033[0;36m";
     public static final String WHITE = "\033[0;37m";
 
-    // Text Styles
     public static final String BOLD = "\033[1m";
     public static final String UNDERLINE = "\033[4m";
 
-    // Bold Colors
     public static final String BOLD_BLACK = "\033[1;30m";
     public static final String BOLD_RED = "\033[1;31m";
     public static final String BOLD_GREEN = "\033[1;32m";
@@ -35,7 +29,6 @@ public final class TerminalStyle {
     public static final String BOLD_CYAN = "\033[1;36m";
     public static final String BOLD_WHITE = "\033[1;37m";
 
-    // --- Printing Methods ---
     public static void print(String color, String text) {
         System.out.print(color + text + RESET);
     }
@@ -59,8 +52,6 @@ public final class TerminalStyle {
     public static void info(String message) {
         println(BOLD_CYAN, "➤ " + message);
     }
-
-    // --- Animation Methods ---
 
     public static void loadingDots(int count, long delayMs) {
         try {
@@ -104,7 +95,7 @@ public final class TerminalStyle {
                 }
                 bar.append("]");
 
-                System.out.print("\r" + BOLD_GREEN + bar + " " + (int)(progress * 100) + "%" + RESET);
+                System.out.print("\r" + BOLD_GREEN + bar + " " + (int) (progress * 100) + "%" + RESET);
                 Thread.sleep(stepDelayMs);
             }
             System.out.println();
