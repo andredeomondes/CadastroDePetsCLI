@@ -38,7 +38,7 @@ O sistema deve ser implementado utilizando conceitos de Orientação a Objetos e
 
 O desafio será organizado em **PASSOS** em que você irá desenvolver novas funcionalidades para nossa aplicação CLI.
 
-Fique a vontade para criar e organizar entidades, serviços, utils e como desejar para este projeto!
+Fique a vontade para criar e organizar entidades, serviços, main.java.br.com.cadastrodepets.utils e como desejar para este projeto!
 
 Para iniciar, crie um Fork deste repositório e clone-o em sua máquina local, e também deixe sua ⭐ no repositório.
 
